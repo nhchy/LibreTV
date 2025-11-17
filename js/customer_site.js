@@ -39,7 +39,7 @@ const CUSTOMER_SITES = {
 		name: '🎬量子资源',
 		api: 'https://pz.v88.qzz.io/?url=https://cj.lzcaiji.com/api.php/provide/vod',
 		detail: 'https://cj.lzcaiji.com'},
-	360zy_com: {
+	a360zy_com: {
 		name: '🎬360 资源',
 		api: 'https://pz.v88.qzz.io/?url=https://360zy.com/api.php/provide/vod',
 		detail: 'https://360zy.com'},
