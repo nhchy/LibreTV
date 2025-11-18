@@ -299,16 +299,16 @@ body {
     box-shadow: 0 0 8px rgba(0, 204, 255, 0.3);
 }
 
-#yellowFilterToggle:checked + .toggle-bg {
+#yellowFilterToggle,#newWinToggle:checked + .toggle-bg {
     background-color: var(--primary-color);
 }
 
-#yellowFilterToggle:checked ~ .toggle-dot {
+#yellowFilterToggle,#newWinToggle:checked ~ .toggle-dot {
     transform: translateX(1.5rem);
 }
 
-#yellowFilterToggle:focus + .toggle-bg,
-#yellowFilterToggle:hover + .toggle-bg {
+#yellowFilterToggle,#newWinToggle:focus + .toggle-bg,
+#yellowFilterToggle,#newWinToggle:hover + .toggle-bg {
     box-shadow: 0 0 0 2px rgba(0, 204, 255, 0.3);
 }
 
@@ -335,7 +335,7 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
-#yellowFilterToggle:checked ~ .toggle-dot {
+#yellowFilterToggle,#newWinToggle:checked ~ .toggle-dot {
     box-shadow: 0 2px 4px rgba(0, 204, 255, 0.3);
 }
 
