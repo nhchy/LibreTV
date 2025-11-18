@@ -563,6 +563,14 @@ function setupEventListeners() {
             localStorage.setItem(PLAYER_CONFIG.adFilteringStorage, e.target.checked);
         });
     }
+    
+    // 新窗口播放开关事件绑定
+    const newWinToggle = document.getElementById('newWinToggle');
+    if (newWinToggle) {
+        newWinToggle.addEventListener('change', function (e) {
+            localStorage.setItem('newWinToggle', e.target.checked);
+        });
+    }    
 }
 
 // 重置搜索区域
