@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('selectedAPIs', JSON.stringify(selectedAPIs));
 
         // 默认选中过滤开关
+        localStorage.setItem('newWinToggle', 'true');
         localStorage.setItem('yellowFilterEnabled', 'true');
         localStorage.setItem(PLAYER_CONFIG.adFilteringStorage, 'true');
 
@@ -41,7 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // 标记已初始化默认值
         localStorage.setItem('hasInitializedDefaults', 'true');
     }
-
+    
+    // 设置新窗口播放开关初始状态
+    const newWinToggle = document.getElementById('newWinToggle');
+    if (newWinToggle) {
+        newWinToggle.checked = localStorage.getItem('newWinToggle') === 'true';
+    }
+    
     // 设置黄色内容过滤器开关初始状态
     const yellowFilterToggle = document.getElementById('yellowFilterToggle');
     if (yellowFilterToggle) {
@@ -1019,9 +1026,10 @@ function playVideo(url, vod_name, sourceCode, episodeIndex = 0, vodId = '') {
     } catch (e) {
         console.error('保存播放状态失败:', e);
     }
-
-    // 在当前标签页中打开播放页面
-    window.location.href = watchUrl;
+    const newWinToggle = document.getElementById('newWinToggle');
+    if (newWinToggle) window.open(watchUrl, '_blank') //在新窗口播放
+    else window.location.href = watchUrl; // 在当前标签页中打开播放页面
+     
 }
 
 // 弹出播放器页面
