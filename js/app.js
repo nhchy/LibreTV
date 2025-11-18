@@ -1311,6 +1311,7 @@ async function exportConfig() {
         'yellowFilterEnabled',
         'adFilteringEnabled',
         'doubanEnabled',
+        'newWinToggle',
         'hasInitializedDefaults'
     ];
 
